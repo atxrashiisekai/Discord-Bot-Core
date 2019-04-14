@@ -1,7 +1,6 @@
 ﻿using System;
 using DicordBotCore.Discord;
 using DicordBotCore.Discord.Entities;
-using Discord.WebSocket;
 
 namespace DicordBotCore
 {
@@ -17,6 +16,9 @@ namespace DicordBotCore
                 Token = "",
                 SocketConfig = SocketConfig.GetDefault()
             };
+
+            var connection = Unity.Resolve<Connection>();
+
         }
 
 
