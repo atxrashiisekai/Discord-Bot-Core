@@ -1,5 +1,6 @@
 ﻿using System;
-using DicordBotCore.Storage;
+using DicordBotCore.Discord;
+using DicordBotCore.Discord.Entities;
 using Discord.WebSocket;
 
 namespace DicordBotCore
@@ -9,8 +10,17 @@ namespace DicordBotCore
         private static void Main()
         {
             Unity.RegisterTypes();
-            Console.WriteLine("Olá, Discord");      
+            Console.WriteLine("Olá, Discord");
+
+            var discordBotConfig = new EscravoBotConfig
+            {
+                Token = "",
+                SocketConfig = SocketConfig.GetDefault()
+            };
         }
+
+
+        
     }
 }
 
