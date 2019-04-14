@@ -2,6 +2,7 @@
 using DicordBotCore.Storage;
 using DicordBotCore.Storage.Implementations;
 using Unity;
+using Unity.Lifetime;
 using Unity.Resolution;
 
 namespace DicordBotCore
@@ -23,7 +24,7 @@ namespace DicordBotCore
         public static void RegisterTypes()
         {
             _container = new UnityContainer();
-            _container.RegisterType<IDataStorage, InMemoryStorage>();
+            _container.RegisterType<IDataStorage, InMemoryStorage>(new ContainerControlledLifetimeManager());
         }
 
         public static T Resolve<T>()
