@@ -2,6 +2,7 @@
 using DicordBotCore.Storage;
 using DicordBotCore.Storage.Implementations;
 using Unity;
+using Unity.Resolution;
 
 namespace DicordBotCore
 {
@@ -23,6 +24,11 @@ namespace DicordBotCore
         {
             _container = new UnityContainer();
             _container.RegisterType<IDataStorage, InMemoryStorage>();
+        }
+
+        public static T Resolve<T>()
+        {
+            return (T) Container.Resolve(typeof(T), string.Empty, new CompositeResolverOverride());
         }
     }
 }
