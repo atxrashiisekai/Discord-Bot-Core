@@ -1,4 +1,4 @@
-# Discord Bot Core 
+# Bot do K'uro
 Bot pessoal desenvolvido por K'uro.
 
 * O repositório ficará salvo para qualquer um que queira modificá-lo futuramente.
